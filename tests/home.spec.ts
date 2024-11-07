@@ -2,8 +2,7 @@ import test, { expect } from "@playwright/test";
 
 test('homepage has title, heading, paragraph and takes a screenshot',async({page})=>{
     await page.goto('/');
-    await page.waitForNavigation();
-    
+
     await expect(page).toHaveTitle(/Next\.js/);
 
     const heading = page.locator('h1');
